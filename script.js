@@ -422,13 +422,13 @@ for (let i = 0; i < frameCount; i++) {
     images.push(img);
 }
 
-gsap.to(imageSeq, {
+    gsap.to(imageSeq, {
     frame: frameCount - 1,
     snap: "frame",
     ease: `none`,
     scrollTrigger: {
     scrub: 0.15,
-    trigger: `#page>canvas`,
+    trigger: `#hero>canvas`,
     start: `top top`,
     end: `600% top`,
     scroller: `#main`,
@@ -465,7 +465,7 @@ function scaleImage(img, ctx) {
 
 // ScrollTrigger for pinning canvas
 ScrollTrigger.create({
-    trigger: "#page>canvas",
+    trigger: "#hero>canvas",
     pin: true,
     scroller: `#main`,
     start: `top top`,
